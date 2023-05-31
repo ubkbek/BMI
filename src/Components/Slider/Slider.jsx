@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./Slider.css";
 import ubkImg from "./../../assets/ubk.jpg";
-import baxtiyorImg from "'./../../assets/baxa.jpg'";
+import baxtiyorImg from "./../../assets/baxa.jpg";
 import javlonImg from "./../../assets/javlon.JPG";
 import elyorImg from "../../assets/elyor.JPG";
 import jamolImg from "./../../assets/jamol.JPG";
