@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import "./Slider.css";
 import ubkImg from "./../../assets/ubk.jpg";
-import baxtiyorImg from "./../../assets/baxa.jpg";
-// import javlonImg from "./../../assets/javlon.jpg";
-import elyorImg from "./../../assets/elyor.jpg";
-import jamolImg from "./../../assets/jamol.jpg";
-import axtamImg from "./../../assets/axtam.jpg";
+import baxtiyorImg from "'./../../assets/baxa.jpg'";
+import javlonImg from "./../../assets/javlon.JPG";
+import elyorImg from "../../assets/elyor.JPG";
+import jamolImg from "./../../assets/jamol.JPG";
+import axtamImg from "./../../assets/axtam.JPG";
 
 const Slider = () => {
   const data = [
@@ -23,13 +23,13 @@ const Slider = () => {
       info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate a placeat ab sint nostrum, perspiciatis ducimus et soluta minus perferendis ullam modi enim asperiores ut, voluptatem cumque, dignissimos nam quo.",
       image: ubkImg,
     },
-    // {
-    //   id: 3,
-    //   name: "Javlonbek Yunusov",
-    //   special: "Oliy toifali ona-tili adabiyoti ustozi",
-    //   info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate a placeat ab sint nostrum, perspiciatis ducimus et soluta minus perferendis ullam modi enim asperiores ut, voluptatem cumque, dignissimos nam quo.",
-    //   image: javlonImg,
-    // },
+    {
+      id: 3,
+      name: "Javlonbek Yunusov",
+      special: "Oliy toifali ona-tili adabiyoti ustozi",
+      info: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate a placeat ab sint nostrum, perspiciatis ducimus et soluta minus perferendis ullam modi enim asperiores ut, voluptatem cumque, dignissimos nam quo.",
+      image: javlonImg,
+    },
     {
       id: 4,
       name: "Elyormen Xotamaliyev",
