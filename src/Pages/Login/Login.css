@@ -1,0 +1,39 @@
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+.login__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.login img {
+  width: 120px;
+  margin-bottom: 32px;
+  margin-top: -100px;
+}
+
+.login h2 {
+  margin-bottom: 24px;
+}
+
+.login form {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  width: 100%;
+}
+
+.login__input {
+  margin-bottom: 16px;
+  padding: 10px;
+}
+
+.login button {
+  margin-bottom: 24px;
+}

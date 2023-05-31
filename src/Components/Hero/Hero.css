@@ -1,0 +1,80 @@
+@font-face {
+  font-display: swap;
+  font-family: "Acme";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../.../assets/fonts/acme-v21-latin-regular.woff2") format("woff2");
+}
+
+.hero {
+  text-align: center;
+  color: #fff;
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding-top: 140px; */
+}
+
+.hero__heading {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 42px;
+  line-height: 64px;
+  font-weight: 600;
+  max-width: 900px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 16px;
+  z-index: 111;
+}
+
+.hero__text {
+  max-width: 950px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 32px;
+  z-index: 1111;
+}
+
+.hero__link {
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px 30px;
+  border-radius: 5px;
+  z-index: 1111;
+  transition: all 0.5s ease;
+}
+
+.hero__link:hover {
+  color: black;
+  background-color: #fff;
+}
+
+.fa-long-arrow-down {
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 730px) {
+  .hero__container {
+    padding-top: 100px;
+  }
+
+  .hero__heading {
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 16px;
+  }
+
+  .hero__text {
+    margin-bottom: 24px;
+  }
+
+  .hero__link {
+    margin-bottom: 32px;
+  }
+}

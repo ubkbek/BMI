@@ -1,0 +1,125 @@
+.about {
+  background: #f5f3f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.about__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: auto 0;
+}
+
+.about__heading {
+  margin-bottom: 8px;
+}
+
+.about__devider {
+  text-align: center;
+  border: 1px solid #9e8339;
+  background-color: #9e8339;
+  width: 150px;
+  margin-bottom: 32px;
+}
+
+.about__text {
+  text-align: center;
+  max-width: 1000px;
+  margin-bottom: 32px;
+}
+
+.about__list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.about__item {
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 20px;
+  max-width: 220px;
+  width: 100%;
+  transition: all 0.5s ease;
+  position: relative;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.about__item:hover {
+  transform: scale(1.05);
+}
+
+.about__item + .about__item {
+  margin-left: 20px;
+}
+
+.about__item-heading {
+  font-size: 20px;
+  font-weight: bolder;
+  margin-bottom: 12px;
+  color: #444343;
+}
+
+.about__item-text {
+  font-style: 16px;
+  line-height: 150%;
+}
+
+.about__link {
+  text-decoration: none;
+  background-color: #9e8339;
+  border: 1px solid #9e8339;
+  padding: 10px 30px;
+  border-radius: 5px;
+  z-index: 1111;
+  transition: all 0.5s ease;
+  color: #fff;
+}
+
+.about__link:hover {
+  color: #151515;
+  background-color: #fff;
+}
+
+.about__icon {
+  color: #9e8339;
+  margin-bottom: 16px;
+}
+
+@media screen and (max-width: 750px) {
+  .about {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .about__list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .about__item {
+    padding: 20 30px;
+    max-width: 400px;
+    width: 100%;
+    transition: all 0.5s ease;
+    position: relative;
+    color: #333;
+    margin-bottom: 20px;
+  }
+
+  .about__item + .about__item {
+    margin-left: 0;
+  }
+}
