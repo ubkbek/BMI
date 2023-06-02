@@ -18,7 +18,7 @@ const Hero = () => {
             autem. Corrupti.
           </p>
 
-          <a className='hero__link' href='/'>
+          <a className='hero__link' href='/#courses'>
             Kurslar
             <i className='fa fa-long-arrow-down' aria-hidden='true'></i>
           </a>

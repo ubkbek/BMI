@@ -1,5 +1,13 @@
 import "./Home.css";
-import { About, Header, Hero, Slider } from "../../Components";
+import {
+  About,
+  Courses,
+  Footer,
+  Header,
+  Hero,
+  News,
+  Slider,
+} from "../../Components";
 
 const Home = () => {
   return (
@@ -11,6 +19,9 @@ const Home = () => {
 
       <About />
       <Slider />
+      <Courses />
+      <News />
+      <Footer />
     </div>
   );
 };

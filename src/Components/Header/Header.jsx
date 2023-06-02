@@ -31,22 +31,22 @@ const Header = () => {
               </a>
             </li>
             <li className='header__nav-item'>
-              <a href='/' className='header__nav-link'>
+              <a href='/#teachers' className='header__nav-link'>
                 JAMOA
               </a>
             </li>
             <li className='header__nav-item'>
-              <a href='/' className='header__nav-link'>
+              <a href='/#news' className='header__nav-link'>
                 YANGILIKLAR
               </a>
             </li>
             <li className='header__nav-item'>
-              <a href='/' className='header__nav-link'>
+              <a href='/results' className='header__nav-link'>
                 NATIJALAR
               </a>
             </li>
             <li className='header__nav-item'>
-              <a href='/' className='header__nav-link'>
+              <a href='/contacts' className='header__nav-link'>
                 BOGLANISH
               </a>
             </li>

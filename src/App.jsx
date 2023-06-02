@@ -1,5 +1,12 @@
 import { Route, Routes } from "react-router-dom";
-import { Admin, Home, Login, Student, Teacher } from "./Pages/index.js";
+import {
+  Admin,
+  AllTeachers,
+  Home,
+  Login,
+  Student,
+  Teacher,
+} from "./Pages/index.js";
 
 const App = () => {
   return (
@@ -10,6 +17,7 @@ const App = () => {
         <Route path='/admin' element={<Admin />} />
         <Route path='/teacher' element={<Teacher />} />
         <Route path='/student' element={<Student />} />
+        <Route path='/allTeachers' element={<AllTeachers />} />
       </Routes>
     </div>
   );

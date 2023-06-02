@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import "./Slider.css";
-import ubkImg from "./../../assets/ubk.jpg";
-import baxtiyorImg from "./../../assets/baxa.jpg";
-import javlonImg from "./../../assets/javlon.JPG";
-import elyorImg from "../../assets/elyor.JPG";
-import jamolImg from "./../../assets/jamol.JPG";
-import axtamImg from "./../../assets/axtam.JPG";
+import ubkImg from "../../assets/ubk.jpg";
+import baxtiyorImg from "../../assets/baxa.jpg";
+import javlonImg from "./../../assets/javlon.jpg";
+import elyorImg from "../../assets/elyor.jpg";
+import jamolImg from "../../assets/jamol.jpg";
+import axtamImg from "../../assets/axtam.jpg";
+import { Link } from "react-router-dom";
 
 const Slider = () => {
   const data = [
@@ -75,7 +76,7 @@ const Slider = () => {
   }, [index]);
 
   return (
-    <section className='section container'>
+    <section id='teachers' className='section container'>
       <h2 className='slider__header'>Ustozlarimiz</h2>
 
       <div className='d-flex justify-content-center'>
@@ -103,6 +104,13 @@ const Slider = () => {
                 <h4>{name}</h4>
                 <p className='title'>{special}</p>
                 <p className='text abs'>{info}</p>
+                <Link className='view_more mt-3' to={"/allTeachers"}>
+                  Hammasini ko`rish
+                  {/* <i
+                    className='fa fa-arrow-right view_more_arrow'
+                    aria-hidden='true'
+                  ></i> */}
+                </Link>
               </div>
             </article>
           );
@@ -121,11 +129,21 @@ const Slider = () => {
             <li
               onClick={() => setIndex(k)}
               className={k == index ? "slider__point checked" : "slider__point"}
-              key={item}
+              key={k}
             ></li>
           );
         })}
       </div>
+
+      {/* <div className='d-flex justify-content-center'>
+        <Link to='/allTeachers' className='view_more btn'>
+          hammasini ko`rish`
+          <i
+            className='fa fa-arrow-right view_more_arrow'
+            aria-hidden='true'
+          ></i>
+        </Link>
+      </div> */}
     </section>
   );
 };
