@@ -1,20 +1,69 @@
-// import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import "./Courses.css";
+
+const TextAnimation = {
+  hidden: {
+    opacity: 0,
+    x: -100,
+  },
+  visible: (custom) => ({
+    x: 0,
+    opacity: 1,
+    transition: { delay: custom * 0.2 },
+  }),
+};
+
+const CardAnimation = {
+  hidden: {
+    opacity: 0,
+    y: 100,
+  },
+  visible: (custom) => ({
+    y: 0,
+    opacity: 1,
+    transition: { delay: custom * 0.05 },
+  }),
+};
 
 const Courses = () => {
   return (
-    <div className='courses'>
+    <motion.div initial='hidden' whileInView='visible' className='courses'>
       <div className='container'>
         <div className='courses__container'>
-          <h2 className='courses__heading' id='courses'>
+          <motion.h2
+            initial='hidden'
+            whileInView='visible'
+            custom={1}
+            variants={TextAnimation}
+            className='courses__heading'
+            id='courses'
+          >
             Kurslar
-          </h2>
-          <div className='d-flex justify-content-center'>
+          </motion.h2>
+          <motion.div
+            initial='hidden'
+            whileInView='visible'
+            custom={1}
+            variants={TextAnimation}
+            className='d-flex justify-content-center'
+          >
             <div className='about__devider'></div>
-          </div>
+          </motion.div>
 
-          <ul className='courses__list'>
-            <li className='card'>
+          <motion.ul
+            initial='hidden'
+            whileInView='visible'
+            variants={CardAnimation}
+            className='courses__list'
+            custom={1}
+          >
+            <motion.li
+              initial='hidden'
+              whileInView='visible'
+              variants={CardAnimation}
+              custom={1}
+              className='card'
+            >
               <img
                 src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1XRoaDHrASPway5l3RUkYorAtvZhBh2QbLA&usqp=CAU'
                 className='card-img-top'
@@ -29,9 +78,15 @@ const Courses = () => {
                   uchun matematika kursi
                 </p>
               </div>
-            </li>
+            </motion.li>
 
-            <li className='card'>
+            <motion.li
+              initial='hidden'
+              whileInView='visible'
+              variants={CardAnimation}
+              custom={2}
+              className='card'
+            >
               <img
                 src='https://otmlar.uz/media/CACHE/images/posts/2022/11/01/e4a4f0a7742184d764915968981abd751/4c0f5d15957a0c2a14029b3f9da9992e.jpg'
                 className='card-img-top'
@@ -46,9 +101,15 @@ const Courses = () => {
                   uchun fizika kursi
                 </p>
               </div>
-            </li>
+            </motion.li>
 
-            <li className='card'>
+            <motion.li
+              initial='hidden'
+              whileInView='visible'
+              variants={CardAnimation}
+              custom={3}
+              className='card'
+            >
               <img
                 src='https://static.oliygoh.uz/crop/1/0/832__85_105740764.jpg?t=1590865302'
                 className='card-img-top'
@@ -63,9 +124,15 @@ const Courses = () => {
                   uchun kimyo kursi
                 </p>
               </div>
-            </li>
+            </motion.li>
 
-            <li className='card'>
+            <motion.li
+              initial='hidden'
+              whileInView='visible'
+              variants={CardAnimation}
+              custom={4}
+              className='card'
+            >
               <img
                 src='https://alltest.uz/uploads/Content/Images/engkard.png'
                 alt='da'
@@ -79,8 +146,58 @@ const Courses = () => {
                   uchun ingliz tili kursi
                 </p>
               </div>
-            </li>
-            <li className='card'>
+            </motion.li>
+            <motion.li
+              initial='hidden'
+              whileInView='visible'
+              variants={CardAnimation}
+              custom={5}
+              className='card'
+            >
+              <img
+                src='https://otmlar.uz/media/CACHE/images/posts/2022/11/01/e4a4f0a7742184d764915968981abd751/4c0f5d15957a0c2a14029b3f9da9992e.jpg'
+                className='card-img-top'
+                alt='da'
+                height={200}
+              />
+
+              <div className='card-body'>
+                <h5 className='card-title'>Fizika</h5>
+                <p className='card-text'>
+                  Oliy talim muaassasalari kirish imtihonlariga tayyorgarlik
+                  uchun fizika kursi
+                </p>
+              </div>
+            </motion.li>
+            <motion.li
+              initial='hidden'
+              whileInView='visible'
+              variants={CardAnimation}
+              custom={6}
+              className='card'
+            >
+              <img
+                src='https://otmlar.uz/media/CACHE/images/posts/2022/11/01/e4a4f0a7742184d764915968981abd751/4c0f5d15957a0c2a14029b3f9da9992e.jpg'
+                className='card-img-top'
+                alt='da'
+                height={200}
+              />
+
+              <div className='card-body'>
+                <h5 className='card-title'>Fizika</h5>
+                <p className='card-text'>
+                  Oliy talim muaassasalari kirish imtihonlariga tayyorgarlik
+                  uchun fizika kursi
+                </p>
+              </div>
+            </motion.li>
+            <motion.li
+              initial='hidden'
+              whileInView='visible'
+              variants={CardAnimation}
+              custom={7}
+              className='card'
+            >
               <img
                 src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1XRoaDHrASPway5l3RUkYorAtvZhBh2QbLA&usqp=CAU'
                 className='card-img-top'
@@ -95,9 +212,15 @@ const Courses = () => {
                   uchun matematika kursi
                 </p>
               </div>
-            </li>
+            </motion.li>
 
-            <li className='card'>
+            <motion.li
+              initial='hidden'
+              whileInView='visible'
+              variants={CardAnimation}
+              custom={8}
+              className='card'
+            >
               <img
                 src='https://otmlar.uz/media/CACHE/images/posts/2022/11/01/e4a4f0a7742184d764915968981abd751/4c0f5d15957a0c2a14029b3f9da9992e.jpg'
                 className='card-img-top'
@@ -112,9 +235,15 @@ const Courses = () => {
                   uchun fizika kursi
                 </p>
               </div>
-            </li>
+            </motion.li>
 
-            <li className='card'>
+            <motion.li
+              initial='hidden'
+              whileInView='visible'
+              variants={CardAnimation}
+              custom={9}
+              className='card'
+            >
               <img
                 src='https://static.oliygoh.uz/crop/1/0/832__85_105740764.jpg?t=1590865302'
                 className='card-img-top'
@@ -129,9 +258,15 @@ const Courses = () => {
                   uchun kimyo kursi
                 </p>
               </div>
-            </li>
+            </motion.li>
 
-            <li className='card'>
+            <motion.li
+              initial='hidden'
+              whileInView='visible'
+              variants={CardAnimation}
+              custom={10}
+              className='card'
+            >
               <img
                 src='https://alltest.uz/uploads/Content/Images/engkard.png'
                 alt='da'
@@ -145,11 +280,11 @@ const Courses = () => {
                   uchun ingliz tili kursi
                 </p>
               </div>
-            </li>
-          </ul>
+            </motion.li>
+          </motion.ul>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

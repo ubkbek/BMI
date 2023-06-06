@@ -1,11 +1,12 @@
 import "./Home.css";
 import {
   About,
+  Contacts,
   Courses,
   Footer,
   Header,
   Hero,
-  News,
+  Questions,
   Slider,
 } from "../../Components";
 
@@ -20,7 +21,8 @@ const Home = () => {
       <About />
       <Slider />
       <Courses />
-      <News />
+      <Questions />
+      <Contacts />
       <Footer />
     </div>
   );

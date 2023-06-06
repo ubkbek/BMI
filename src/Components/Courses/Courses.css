@@ -1,5 +1,4 @@
 .courses {
-  /* background-color: aqua; */
   margin-bottom: 100px;
   display: flex;
   flex-direction: column;
@@ -17,14 +16,30 @@
   flex-wrap: wrap;
 }
 
-.courses .card {
+.card {
   width: 280px;
   height: 350px;
   perspective: 800px;
   overflow: hidden;
+  box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
+    rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+  margin-left: 15px;
+  margin-bottom: 15px;
+  position: relative;
+  transition: all 0.2s ease;
 }
 
-.courses .card {
-  margin-left: 20px;
-  margin-bottom: 20px;
+.card:hover {
+  /* transform: scale(1.05); */
+  transform: rotate(1deg);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.card img {
+  transition: all 0.5s ease;
+  position: relative;
+}
+
+.card:hover img {
+  /* transform: scale(1.05); */
 }

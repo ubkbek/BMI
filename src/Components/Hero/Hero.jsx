@@ -1,22 +1,39 @@
 import "./Hero.css";
+import { motion } from "framer-motion";
+
+const TextAnimation = {
+  hidden: {
+    opacity: 0,
+    x: -100,
+  },
+  visible: (custom) => ({
+    x: 0,
+    opacity: 1,
+    transition: { delay: custom * 0.3 },
+  }),
+};
 
 const Hero = () => {
   return (
-    <div className='hero'>
+    <motion.div initial='hidden' whileInView='visible' className='hero'>
       <div className='container'>
         <div className='hero__container'>
-          <h1 className='hero__heading'>
+          <motion.h1
+            custom={1}
+            variants={TextAnimation}
+            className='hero__heading'
+          >
             Renessans O`quv markazi sifatli talim va kafolatli natija taklif
             qiladi!
-          </h1>
+          </motion.h1>
 
-          <p className='hero__text'>
+          <motion.p custom={2} variants={TextAnimation} className='hero__text'>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum porro
             expedita atque inventore modi cum amet eius, adipisci asperiores
             reprehenderit, ad, sequi facere? Reprehenderit vero ipsa modi odio
             autem. Corrupti. Ad, sequi facere? Reprehenderit vero ipsa modi odio
             autem. Corrupti.
-          </p>
+          </motion.p>
 
           <a className='hero__link' href='/#courses'>
             Kurslar
@@ -24,7 +41,7 @@ const Hero = () => {
           </a>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

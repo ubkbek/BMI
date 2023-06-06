@@ -7,6 +7,19 @@ import elyorImg from "../../assets/elyor.jpg";
 import jamolImg from "../../assets/jamol.jpg";
 import axtamImg from "../../assets/axtam.jpg";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+
+const CardAnimation = {
+  hidden: {
+    opacity: 0,
+    y: 100,
+  },
+  visible: (custom) => ({
+    y: 0,
+    opacity: 1,
+    transition: { delay: custom * 0.2 },
+  }),
+};
 
 const Slider = () => {
   const data = [
@@ -106,10 +119,6 @@ const Slider = () => {
                 <p className='text abs'>{info}</p>
                 <Link className='view_more mt-3' to={"/allTeachers"}>
                   Hammasini ko`rish
-                  {/* <i
-                    className='fa fa-arrow-right view_more_arrow'
-                    aria-hidden='true'
-                  ></i> */}
                 </Link>
               </div>
             </article>
@@ -123,7 +132,12 @@ const Slider = () => {
         </button>
       </div>
 
-      <div className='slider__points'>
+      <motion.div
+        variants={CardAnimation}
+        initial='hidden'
+        whileInView='visible'
+        className='slider__points'
+      >
         {people.map((item, k) => {
           return (
             <li
@@ -133,7 +147,7 @@ const Slider = () => {
             ></li>
           );
         })}
-      </div>
+      </motion.div>
 
       {/* <div className='d-flex justify-content-center'>
         <Link to='/allTeachers' className='view_more btn'>

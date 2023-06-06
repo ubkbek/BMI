@@ -7,7 +7,7 @@ const Header = () => {
   const [isActive, setIsActive] = useState(false);
 
   return (
-    <div className={isActive ? "active header" : "header"}>
+    <div id='header' className={isActive ? "active header" : "header"}>
       <div className='container'>
         <div className='header__container'>
           <Link className='header__logo-link' to='/'>
@@ -41,12 +41,12 @@ const Header = () => {
               </a>
             </li>
             <li className='header__nav-item'>
-              <a href='/results' className='header__nav-link'>
+              <a href='/#results' className='header__nav-link'>
                 NATIJALAR
               </a>
             </li>
             <li className='header__nav-item'>
-              <a href='/contacts' className='header__nav-link'>
+              <a href='/#contacts' className='header__nav-link'>
                 BOGLANISH
               </a>
             </li>

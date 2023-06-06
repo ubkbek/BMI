@@ -31,6 +31,14 @@
   align-items: center;
 }
 
+.header__nav-item {
+  transition: all 0.3s ease;
+}
+
+.header__nav-item:hover {
+  transform: translateY(-5px);
+}
+
 .header__nav-item + .header__nav-item {
   margin-left: 25px;
 }

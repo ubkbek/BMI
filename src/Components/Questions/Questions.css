@@ -1,0 +1,13 @@
+.news {
+  margin-bottom: 0px;
+  background-color: #f5f3f4;
+  padding: 60px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .news {
+    /* margin-bottom: 50px; */
+    background-color: #f5f3f4;
+    /* padding: 60px 0; */
+  }
+}
