@@ -22,6 +22,17 @@ const CardAnimation = {
 };
 
 const Slider = () => {
+  const [teachers, setTeachers] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:9090/public_teachers")
+      .then((res) => res.json())
+      .then((data) => {
+        setTeachers(data);
+        console.log(data);
+      });
+  }, []);
+
   const data = [
     {
       id: 1,
