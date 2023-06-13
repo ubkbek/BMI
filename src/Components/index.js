@@ -13,6 +13,7 @@ import TeacherCourses from "./TeacherCourses";
 import AdminTeachers from "./AdminTeachers";
 import AdminGroups from "./AdminGroups";
 import AdminStudents from "./AdminStudents";
+import Results from "./Results";
 
 export {
   Header,
@@ -30,4 +31,5 @@ export {
   AdminTeachers,
   AdminGroups,
   AdminStudents,
+  Results,
 };

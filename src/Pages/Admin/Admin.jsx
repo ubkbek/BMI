@@ -1,4 +1,3 @@
-import * as React from "react";
 import { styled, useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
@@ -11,6 +10,7 @@ import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
 import MenuIcon from "@mui/icons-material/Menu";
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+import StarIcon from "@mui/icons-material/Star";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
@@ -24,6 +24,9 @@ import GroupsIcon from "@mui/icons-material/Groups";
 import logo from "./../../assets/logo.png";
 import { Link } from "react-router-dom";
 import { Outlet } from "react-router-dom";
+import { useLogin } from "../../Contexts/auth.context";
+import { useEffect } from "react";
+import { useState } from "react";
 
 const drawerWidth = 240;
 
@@ -73,7 +76,9 @@ const DrawerHeader = styled("div")(({ theme }) => ({
 
 export default function Admin() {
   const theme = useTheme();
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = useState(true);
+  const [appeals, setAppeals] = useState([]);
+  const [token] = useLogin();
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -82,6 +87,19 @@ export default function Admin() {
   const handleDrawerClose = () => {
     setOpen(false);
   };
+
+  useEffect(() => {
+    fetch("http://localhost:9090/appeals", {
+      method: "GET",
+      headers: {
+        access_token: token,
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        setAppeals(data.appeals);
+      });
+  }, [token, appeals]);
 
   return (
     <Box sx={{ display: "flex" }}>
@@ -138,11 +156,14 @@ export default function Admin() {
                 <ListItemIcon>
                   <SupportAgentIcon />
                 </ListItemIcon>
-                <ListItemText primary={"Murojatlar"} />
+                <ListItemText primary={"Murojatlar "} />
+                <i className='fa fa-commenting ms-3' aria-hidden='true'></i>
+                <sup className='text-danger fs-6 fw-bolder'>
+                  {appeals.filter((e) => e.answered == false).length}
+                </sup>
               </ListItemButton>
             </Link>
           </ListItem>
-
           <ListItem disablePadding>
             <Link to={"./news"} className='text-dark text-decoration-none'>
               <ListItemButton>
@@ -153,7 +174,6 @@ export default function Admin() {
               </ListItemButton>
             </Link>
           </ListItem>
-
           <ListItem disablePadding>
             <Link to={"./courses"} className='text-dark text-decoration-none'>
               <ListItemButton>
@@ -164,7 +184,6 @@ export default function Admin() {
               </ListItemButton>
             </Link>
           </ListItem>
-
           <ListItem disablePadding>
             <Link to={"./teachers"} className='text-dark text-decoration-none'>
               <ListItemButton>
@@ -175,7 +194,6 @@ export default function Admin() {
               </ListItemButton>
             </Link>
           </ListItem>
-
           <Link to={"./groups"} className='text-dark text-decoration-none'>
             <ListItem disablePadding>
               <ListItemButton>
@@ -186,7 +204,6 @@ export default function Admin() {
               </ListItemButton>
             </ListItem>
           </Link>
-
           <ListItem disablePadding>
             <Link to={"./students"} className='text-dark text-decoration-none'>
               <ListItemButton>
@@ -194,6 +211,19 @@ export default function Admin() {
                   <LocalLibraryIcon />
                 </ListItemIcon>
                 <ListItemText primary={"Talabalar"} />
+              </ListItemButton>
+            </Link>
+          </ListItem>
+          <ListItem disablePadding>
+            <Link
+              to={"./graduations"}
+              className='text-dark text-decoration-none'
+            >
+              <ListItemButton>
+                <ListItemIcon>
+                  <StarIcon />
+                </ListItemIcon>
+                <ListItemText primary={"Bitiruvchilar"} />
               </ListItemButton>
             </Link>
           </ListItem>

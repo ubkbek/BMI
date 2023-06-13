@@ -18,6 +18,7 @@ import {
 } from "./Components/index.js";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import AdminGraduations from "./Components/AdminGraduations/AdminGraduations.jsx";
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
           <Route path='teachers' element={<AdminTeachers />} />
           <Route path='groups' element={<AdminGroups />} />
           <Route path='students' element={<AdminStudents />} />
+          <Route path='graduations' element={<AdminGraduations />} />
         </Route>
         <Route path='/teacher' element={<Teacher />} />
         <Route path='/student' element={<Student />} />

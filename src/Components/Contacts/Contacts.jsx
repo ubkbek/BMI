@@ -1,13 +1,21 @@
 import { TextField } from "@mui/material";
 import "./Contacts.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 
 const Contacts = () => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
-  ("contacts__input");
+  const [course_id, setCourse_id] = useState("");
+  const [courses, setCourses] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:9090/public_courses")
+      .then((res) => res.json())
+      .then((data) => setCourses(data))
+      .catch((err) => console.error(err));
+  }, []);
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -22,12 +30,12 @@ const Contacts = () => {
           name: name.trim(),
           phone,
           message: message.trim(),
+          course_id,
         }),
       })
         .then((res) => res.json())
         .then((data) => {
           if (data) {
-            // alert("Successfully sended!");
             toast("Xabar qoldirildi!", {
               position: "bottom-right",
               autoClose: 5000,
@@ -74,13 +82,29 @@ const Contacts = () => {
               required
             />
 
+            <select
+              className='form-control contacts__input p-3'
+              name='course_id'
+              onChange={(e) => setCourse_id(e.target.value)}
+              required
+            >
+              <option value='' disabled selected hidden>
+                Kursni tanlang
+              </option>
+              {courses.map((course) => (
+                <option key={course.id} value={course.id}>
+                  {course.title}
+                </option>
+              ))}
+            </select>
+
             <textarea
               onChange={(e) => setMessage(e.target.value)}
               className='form-control contacts__input'
               name='message'
               id='messages'
               cols='30'
-              rows='5'
+              rows='3'
               placeholder='Savolingizni kiriting'
             ></textarea>
 

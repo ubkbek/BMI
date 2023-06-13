@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  scroll-margin-top: 100px;
 }
 
 .courses__heading {
@@ -18,7 +19,8 @@
 
 .card {
   width: 280px;
-  height: 350px;
+  min-height: 350px;
+  height: 100%;
   perspective: 800px;
   overflow: hidden;
   box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px,
@@ -27,6 +29,15 @@
   margin-bottom: 15px;
   position: relative;
   transition: all 0.2s ease;
+}
+
+.courses__card-link {
+  color: #9e8339;
+  transition: all 0.5s ease;
+}
+
+.courses__card-link:hover {
+  color: #027cf7;
 }
 
 .card:hover {
@@ -42,4 +53,7 @@
 
 .card:hover img {
   /* transform: scale(1.05); */
+}
+
+.courses__card-link {
 }

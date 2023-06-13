@@ -8,6 +8,7 @@ import {
   Hero,
   Questions,
   Slider,
+  Results,
 } from "../../Components";
 
 const Home = () => {
@@ -21,6 +22,7 @@ const Home = () => {
       <About />
       <Slider />
       <Courses />
+      <Results />
       <Questions />
       <Contacts />
       <Footer />

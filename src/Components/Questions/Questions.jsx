@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { motion } from "framer-motion";
 import "./Questions.css";
-import { CardActions } from "@mui/material";
+// import { CardActions } from "@mui/material";
 
 const TextAnimation = {
   hidden: {
@@ -27,6 +27,7 @@ export default function Questions() {
       variants={TextAnimation}
       custom={1}
       className='news'
+      id='questions'
     >
       <div className='container' id='news'>
         <motion.h2

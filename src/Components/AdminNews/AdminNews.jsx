@@ -130,7 +130,8 @@ const AdminNews = () => {
             <div className='col col-news-1'>Yangilik sarlavhasi</div>
             <div className='col col-news-2'>matni</div>
             <div className='col col-news-3'>yaratilgan vaqti</div>
-            <div className='col col-news-4'>o`chirish</div>
+            <div className='col col-news-4'>activligi</div>
+            <div className='col col-news-5'>o`chirish</div>
           </li>
 
           {news.map((item) => (
@@ -145,6 +146,14 @@ const AdminNews = () => {
                 {item.created_at}
               </div>
               <div className='col col-news-4' data-label='Amount'>
+                <input
+                  id={item.id}
+                  // onChange={handleActive}
+                  type='checkbox'
+                  checked={item.status}
+                />
+              </div>
+              <div className='col col-news-5' data-label='Amount'>
                 <button className='btn text-danger'>
                   <i
                     onClick={handleDelete}

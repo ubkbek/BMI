@@ -27,7 +27,12 @@ const CardAnimation = {
 
 const Courses = () => {
   return (
-    <motion.div initial='hidden' whileInView='visible' className='courses'>
+    <motion.div
+      id='courses'
+      initial='hidden'
+      whileInView='visible'
+      className='courses'
+    >
       <div className='container'>
         <div className='courses__container'>
           <motion.h2
@@ -73,10 +78,13 @@ const Courses = () => {
 
               <div className='card-body'>
                 <h5 className='card-title'>Matematika</h5>
-                <p className='card-text'>
+                <p className='card-text mb-3'>
                   Oliy talim muaassasalari kirish imtihonlariga tayyorgarlik
                   uchun matematika kursi
                 </p>
+                <a className='about__link p-2' href='#contacts'>
+                  Kursga yozilish
+                </a>
               </div>
             </motion.li>
 
@@ -96,10 +104,13 @@ const Courses = () => {
 
               <div className='card-body'>
                 <h5 className='card-title'>Fizika</h5>
-                <p className='card-text'>
+                <p className='card-text mb-3 mb-3'>
                   Oliy talim muaassasalari kirish imtihonlariga tayyorgarlik
                   uchun fizika kursi
                 </p>
+                <a className='about__link p-2' href='#contacts'>
+                  Kursga yozilish
+                </a>
               </div>
             </motion.li>
 
@@ -119,10 +130,13 @@ const Courses = () => {
 
               <div className='card-body'>
                 <h5 className='card-title'>Kimyo</h5>
-                <p className='card-text'>
+                <p className='card-text mb-3'>
                   Oliy talim muaassasalari kirish imtihonlariga tayyorgarlik
                   uchun kimyo kursi
                 </p>
+                <a className='about__link p-2' href='#contacts'>
+                  Kursga yozilish
+                </a>
               </div>
             </motion.li>
 
@@ -141,10 +155,13 @@ const Courses = () => {
 
               <div className='card-body'>
                 <h5 className='card-title'>Ingliz tili garramatikasi</h5>
-                <p className='card-text'>
+                <p className='card-text mb-3'>
                   Oliy talim muaassasalari kirish imtihonlariga tayyorgarlik
                   uchun ingliz tili kursi
                 </p>
+                <a className='about__link p-2' href='#contacts'>
+                  Kursga yozilish
+                </a>
               </div>
             </motion.li>
             <motion.li
@@ -163,10 +180,13 @@ const Courses = () => {
 
               <div className='card-body'>
                 <h5 className='card-title'>Fizika</h5>
-                <p className='card-text'>
+                <p className='card-text mb-3'>
                   Oliy talim muaassasalari kirish imtihonlariga tayyorgarlik
                   uchun fizika kursi
                 </p>
+                <a className='about__link p-2' href='#contacts'>
+                  Kursga yozilish
+                </a>
               </div>
             </motion.li>
             <motion.li
@@ -185,10 +205,13 @@ const Courses = () => {
 
               <div className='card-body'>
                 <h5 className='card-title'>Fizika</h5>
-                <p className='card-text'>
+                <p className='card-text mb-3'>
                   Oliy talim muaassasalari kirish imtihonlariga tayyorgarlik
                   uchun fizika kursi
                 </p>
+                <a className='about__link p-2' href='#contacts'>
+                  Kursga yozilish
+                </a>
               </div>
             </motion.li>
             <motion.li
@@ -207,10 +230,13 @@ const Courses = () => {
 
               <div className='card-body'>
                 <h5 className='card-title'>Matematika</h5>
-                <p className='card-text'>
+                <p className='card-text mb-3'>
                   Oliy talim muaassasalari kirish imtihonlariga tayyorgarlik
                   uchun matematika kursi
                 </p>
+                <a className='about__link p-2' href='#contacts'>
+                  Kursga yozilish
+                </a>
               </div>
             </motion.li>
 
@@ -230,10 +256,13 @@ const Courses = () => {
 
               <div className='card-body'>
                 <h5 className='card-title'>Fizika</h5>
-                <p className='card-text'>
+                <p className='card-text mb-3'>
                   Oliy talim muaassasalari kirish imtihonlariga tayyorgarlik
                   uchun fizika kursi
                 </p>
+                <a className='about__link p-2' href='#contacts'>
+                  Kursga yozilish
+                </a>
               </div>
             </motion.li>
 
@@ -253,10 +282,13 @@ const Courses = () => {
 
               <div className='card-body'>
                 <h5 className='card-title'>Kimyo</h5>
-                <p className='card-text'>
+                <p className='card-text mb-3'>
                   Oliy talim muaassasalari kirish imtihonlariga tayyorgarlik
                   uchun kimyo kursi
                 </p>
+                <a className='about__link p-2' href='#contacts'>
+                  Kursga yozilish
+                </a>
               </div>
             </motion.li>
 
@@ -275,10 +307,13 @@ const Courses = () => {
 
               <div className='card-body'>
                 <h5 className='card-title'>Ingliz tili garramatikasi</h5>
-                <p className='card-text'>
+                <p className='card-text mb-3'>
                   Oliy talim muaassasalari kirish imtihonlariga tayyorgarlik
                   uchun ingliz tili kursi
                 </p>
+                <a className='about__link p-2' href='#contacts'>
+                  Kursga yozilish
+                </a>
               </div>
             </motion.li>
           </motion.ul>

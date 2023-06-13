@@ -46,28 +46,32 @@ const Appeals = () => {
       <div className='containerbek'>
         <ul className='responsive-table'>
           <li className='table-header'>
-            <div className='col col-1'>Ism familiya</div>
-            <div className='col col-2'>telefon raqami</div>
-            <div className='col col-3'>xabar</div>
-            <div className='col col-4'>vaqti</div>
-            <div className='col col-4'>holati</div>
+            <div className='col appeals-col-1'>Ism familiya</div>
+            <div className='col appeals-col-2'>telefon raqami</div>
+            <div className='col appeals-col-3'>qiziqqan kursi</div>
+            <div className='col appeals-col-4'>xabar</div>
+            <div className='col appeals-col-5'>vaqti</div>
+            <div className='col appeals-col-6'>holati</div>
           </li>
 
           {appeals.map((item) => (
             <li key={item.id} className='table-row'>
-              <div className='col col-1' data-label='Job Id'>
+              <div className='col appeals-col-1' data-label='Job Id'>
                 {item.name}
               </div>
-              <div className='col col-2' data-label='Customer Name'>
+              <div className='col appeals-col-2' data-label='Customer Name'>
                 {item.phone}
               </div>
-              <div className='col col-3' data-label='Amount'>
+              <div className='col appeals-col-3' data-label='Amount'>
+                {item.title}
+              </div>
+              <div className='col appeals-col-4' data-label='Amount'>
                 {item.message}
               </div>
-              <div className='col col-4' data-label='Amount'>
+              <div className='col appeals-col-5' data-label='Amount'>
                 {item.created_at}
               </div>
-              <div className='col col-4' data-label='Payment Status'>
+              <div className='col appeals-col-6' data-label='Payment Status'>
                 <input
                   id={item.id}
                   onChange={handleAnswer}
