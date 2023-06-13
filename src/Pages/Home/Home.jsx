@@ -8,6 +8,7 @@ import {
   Hero,
   Questions,
   Results,
+  Teachers,
 } from "../../Components";
 
 const Home = () => {
@@ -21,6 +22,7 @@ const Home = () => {
       <About />
       <Courses />
       <Results />
+      <Teachers />
       <Questions />
       <Contacts />
       <Footer />
