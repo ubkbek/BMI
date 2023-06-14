@@ -4,31 +4,22 @@ import { useState } from "react";
 
 const Results = () => {
   const [graduates, setGraduates] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [renderData, setRenderData] = useState([]);
-  const itemsPerPage = 2;
-  let pages = 0;
 
   useEffect(() => {
     fetch("http://localhost:9090/graduates")
       .then((res) => res.json())
       .then((data) => {
         setGraduates(data);
-        pages = Math.ceil(graduates / 2);
-
-        const startIndex = (currentPage - 1) * itemsPerPage;
-        const endIndex = startIndex + itemsPerPage;
-        setRenderData(graduates.slice(startIndex, endIndex));
       });
-  }, [currentPage]);
+  }, [graduates]);
 
   return (
     <div className='results'>
       <div className='container results__container'>
-        <h2 className='about__heading text-start'>
+        <h2 className='about__heading text-center'>
           Bitiruvchilarimiz natijalari
         </h2>
-        <div className='d-flex justify-content-start'>
+        <div className='d-flex justify-content-center'>
           <div className='about__devider'></div>
         </div>
 

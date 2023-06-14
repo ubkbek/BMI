@@ -14,7 +14,7 @@ import AdminGroups from "./AdminGroups";
 import AdminStudents from "./AdminStudents";
 import Results from "./Results";
 import Teachers from "./Teachers/Teachers";
-import Slider from "./Slider/Slider";
+import Slider from "./ClientTeachers/ClientTeachers";
 
 export {
   Header,

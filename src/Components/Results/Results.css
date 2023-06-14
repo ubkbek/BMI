@@ -4,17 +4,19 @@
 
 .results__list {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
 .results__item {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: 50%;
   padding: 30px 40px;
   margin-bottom: 20px;
   border: 1px solid #33333333;
+  /* margin-right: 20px; */
 }
 
 .results__item img {
