@@ -73,7 +73,7 @@ const DrawerHeader = styled("div")(({ theme }) => ({
   justifyContent: "flex-end",
 }));
 
-export default function Admin() {
+export default function TeacherPage() {
   const navigate = useNavigate();
   const theme = useTheme();
   const [open, setOpen] = useState(true);
@@ -125,7 +125,7 @@ export default function Admin() {
           >
             <img src={logo} alt='logo' width={150} />
             <div className='d-flex align-items-center'>
-              <h4 className='h5 text-warning m-0'>Admin</h4>
+              <h4 className='h5 text-warning m-0'>Ustoz</h4>
               <button
                 onClick={() => setToken("")}
                 className='btn btn-outline-light ms-3 py-1 px-4 text-center'

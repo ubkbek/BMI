@@ -6,6 +6,7 @@ import {
   Login,
   Student,
   Teacher,
+  TeacherPage,
 } from "./Pages/index.js";
 
 import {
@@ -35,7 +36,7 @@ const App = () => {
           <Route path='students' element={<AdminStudents />} />
           <Route path='graduations' element={<AdminGraduations />} />
         </Route>
-        <Route path='/teacher' element={<Teacher />} />
+        <Route path='/teacher' element={<TeacherPage />} />
         <Route path='/student' element={<Student />} />
         <Route path='/allTeachers' element={<AllTeachers />} />
       </Routes>

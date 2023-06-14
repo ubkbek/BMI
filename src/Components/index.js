@@ -14,6 +14,7 @@ import AdminGroups from "./AdminGroups";
 import AdminStudents from "./AdminStudents";
 import Results from "./Results";
 import Teachers from "./Teachers/Teachers";
+import Slider from "./Slider/Slider";
 
 export {
   Header,
@@ -32,4 +33,5 @@ export {
   AdminStudents,
   Results,
   Teachers,
+  Slider,
 };

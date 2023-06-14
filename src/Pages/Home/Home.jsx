@@ -9,6 +9,7 @@ import {
   Questions,
   Results,
   Teachers,
+  Slider,
 } from "../../Components";
 
 const Home = () => {
@@ -23,6 +24,7 @@ const Home = () => {
       <Courses />
       <Results />
       <Teachers />
+      <Slider />
       <Questions />
       <Contacts />
       <Footer />

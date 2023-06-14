@@ -4,5 +4,6 @@ import Admin from "./Admin/Admin.jsx";
 import Teacher from "./Teacher/Teacher.jsx";
 import Student from "./Student/Student.jsx";
 import AllTeachers from "./AllTeachers/AllTeachers.jsx";
+import TeacherPage from "./TeacherPage/TeacherPage.jsx";
 
-export { Home, Login, Admin, Teacher, Student, AllTeachers };
+export { Home, Login, Admin, Teacher, Student, AllTeachers, TeacherPage };
