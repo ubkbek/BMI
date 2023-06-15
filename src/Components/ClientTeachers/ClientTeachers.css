@@ -1,11 +1,13 @@
 .teachers {
   margin-bottom: 80px;
+  scroll-margin-top: 100px;
 }
 
 .teachers__list {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-bottom: 16px;
 }
 
 .teachers__item {
@@ -16,20 +18,19 @@
   border-radius: 20px;
   overflow: hidden;
   margin-bottom: 20px;
-}
-
-.teachers__item :hover img {
-  transform: scale(1.1);
-}
-
-.teachers__item + .teachers__item {
-  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .teachers img {
   width: 380px;
   height: 380px;
   object-fit: cover;
+  transition: all 0.5s ease;
+  object-position: center;
+}
+
+.teachers img:hover {
+  transform: scale(1.1);
 }
 
 .teachers__item-wrapper {
@@ -40,4 +41,15 @@
   height: 100%;
   top: 60%;
   background-color: #33333399;
+}
+
+@media screen and (max-width: 839px) {
+  .teachers {
+    margin-bottom: 60px;
+    scroll-margin-top: 80px;
+  }
+
+  .teachers__item {
+    margin-right: 0px;
+  }
 }

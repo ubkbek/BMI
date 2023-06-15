@@ -50,6 +50,7 @@
 .card img {
   transition: all 0.5s ease;
   position: relative;
+  object-fit: cover;
 }
 
 /* .card:hover img {
@@ -58,3 +59,10 @@
 
 .courses__card-link {
 } */
+
+@media screen and (max-width: 768px) {
+  .card {
+    width: 380px;
+    margin-left: 0;
+  }
+}

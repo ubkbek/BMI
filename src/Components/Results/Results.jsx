@@ -14,7 +14,7 @@ const Results = () => {
   }, [graduates]);
 
   return (
-    <div className='results'>
+    <div className='results' id='results'>
       <div className='container results__container'>
         <h2 className='about__heading text-center'>
           Bitiruvchilarimiz natijalari

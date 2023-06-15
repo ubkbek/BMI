@@ -5,7 +5,7 @@ import {
   Home,
   Login,
   Student,
-  Teacher,
+  // Teacher,
   TeacherPage,
 } from "./Pages/index.js";
 
