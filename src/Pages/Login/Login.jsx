@@ -16,7 +16,7 @@ const Login = () => {
 
     const { name, password } = e.target;
 
-    fetch("http://localhost:9090/login", {
+    fetch("https://bmi-backend.aknb.site/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

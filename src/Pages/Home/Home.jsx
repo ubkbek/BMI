@@ -10,6 +10,7 @@ import {
   Results,
   Teachers,
   Slider,
+  News,
 } from "../../Components";
 
 const Home = () => {
@@ -24,7 +25,9 @@ const Home = () => {
       <Courses />
       <Results />
       <Teachers />
+
       <Slider />
+      <News />
       <Questions />
       <Contacts />
       <Footer />

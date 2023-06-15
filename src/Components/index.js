@@ -15,6 +15,8 @@ import AdminStudents from "./AdminStudents";
 import Results from "./Results";
 import Teachers from "./Teachers/Teachers";
 import Slider from "./ClientTeachers/ClientTeachers";
+import News from "./News";
+News;
 
 export {
   Header,
@@ -34,4 +36,5 @@ export {
   Results,
   Teachers,
   Slider,
+  News,
 };
